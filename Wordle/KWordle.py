@@ -1,5 +1,5 @@
 from colorama import init, Fore, Back, Style
-import random, re, pyperclip
+import random, re, pyperclip, requests, ast
 
 
 # Making Wordl
@@ -73,9 +73,15 @@ def Game():
 
                     print(f"{item['1']}{item['2']}{item['3']}{item['4']}{item['5']}")
             if won is False:
-                print(f"{Back.RED}Major L{Back.RESET}")
+                print(f"{Back.RED}Major L{Back.RESET}\nWord(le): {''.join(word_as_dict.values())}")
             if won is True:
                 print(f"{Back.GREEN}Major W{Back.RESET}")
+            mean = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{''.join(word_as_dict.values())}")
+            mean2 = ast.literal_eval(mean.text)
+            try:
+                print("Meaning: " + mean2[0]["meanings"][0]["definitions"][0]["definition"])
+            except KeyError:
+                pass
             stuff = input("Share (Y/N): ")
             if stuff.upper() == "Y":
                 pyperclip.copy(f'KWordle {attempt}/6\n\n{moji_attempts}')
