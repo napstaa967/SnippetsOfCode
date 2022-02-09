@@ -71,7 +71,7 @@ def Game():
         if won is True:
             print(f"{Back.GREEN}Major W{Back.RESET}")
         stuff = input("Share (Y/N): ")
-        if stuff == "Y":
+        if stuff.upper() == "Y":
             pyperclip.copy(f'KWordle {attempt}/6\n\n{moji_attempts}')
     return
 

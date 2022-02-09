@@ -15,7 +15,7 @@ def Game():
     moji_attempts = ""
     the_word = dict(zip(['1', '2', '3', '4', '5', '6'], list(pick_word())))
     while done is not True:
-        if attempt == 6:
+        if attempt == 16777216:
             done = True
             won = False
             break
@@ -70,7 +70,7 @@ def Game():
         if won is True:
             print(f"{Back.GREEN}Major W{Back.RESET}")
         stuff = input("Share (Y/N): ")
-        if stuff == "Y":
+        if stuff.upper() == "Y":
             pyperclip.copy(f'Colordle {attempt}/16777216\n\n{moji_attempts}')
     return
 
