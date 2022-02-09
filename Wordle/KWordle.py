@@ -80,7 +80,9 @@ def pick_word():
     with open(".\words.txt", "r") as words:
         wordsp2 = words.read().split("\n")
         print(f"dictionary: {wordsp2}")
-    return random.choice(wordsp2)
+        stuff = random.choice(wordsp2)
+        print(stuff)
+    return stuff
 
 
 if __name__ == '__main__':

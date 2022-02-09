@@ -52,7 +52,7 @@ def Game():
             else:
                 moji_attempts += "⬛"
                 temp_attempt[str(i + 1)] = f"{Back.LIGHTBLACK_EX}{Fore.LIGHTWHITE_EX}{word_as_dict[str(i + 1)]}{Style.RESET_ALL}"
-            if i+1 == 5:
+            if i+1 == 6:
                 moji_attempts += "\n"
                 attempts.append(temp_attempt)
                 if ''.join(the_word.values()) == ''.join(word_as_dict.values()):
@@ -64,7 +64,6 @@ def Game():
         print(f"Attempts: {attempt}/16777216")
         if attempts is not None:
             for item in attempts:
-
                 print(f"{item['1']}{item['2']}{item['3']}{item['4']}{item['5']}{item['6']}")
         if won is False:
             print(f"{Back.RED}Major L{Back.RESET}")
