@@ -1,5 +1,4 @@
-import os, typing, sys
-
+import os
 reset = False
 
 def init():
