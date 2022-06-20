@@ -1,5 +1,5 @@
-# RCS2022
-compilation of the stuff i've coded in 2022
+# SnippetsOfCode
+compilation of the stuff i've coded
 
 
 ## [KWordle/Colordle](/Wordle)
