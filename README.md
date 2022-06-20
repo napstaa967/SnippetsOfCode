@@ -23,3 +23,8 @@ a counting script that lets you count using any set of unicode characters
 ripoff colorama
 
 this script allows for you to paint the command line with any custom rgb color, instead of the typical 16
+
+## [UPlayTooMuch](/UPlayTooMuch)
+### Added 20/6/2022 12:04 AM CST
+
+gives you an image of a monkey with the caption "U PLAY TOO MUCH!!!" if you start any of the processes in processes.txt, then shuts down your computer
